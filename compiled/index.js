@@ -9,16 +9,16 @@ Object.defineProperty(exports, "ClientTable", {
     return _vClientTable["default"];
   }
 });
-Object.defineProperty(exports, "ServerTable", {
-  enumerable: true,
-  get: function get() {
-    return _vServerTable["default"];
-  }
-});
 Object.defineProperty(exports, "EventBus", {
   enumerable: true,
   get: function get() {
     return _bus["default"];
+  }
+});
+Object.defineProperty(exports, "ServerTable", {
+  enumerable: true,
+  get: function get() {
+    return _vServerTable["default"];
   }
 });
 

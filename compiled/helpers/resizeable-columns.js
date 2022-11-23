@@ -1,15 +1,15 @@
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 module.exports = function (table, hasChildRow, isChildRowTogglerFirst, resizeableColumns, stickyHeader) {
   var row = table.getElementsByTagName("tr")[0],
       cols = row ? Array.from(row.children) : undefined;
   if (!cols) return;
 
-  if (_typeof(resizeableColumns) === 'object') {
+  if (_typeof(resizeableColumns) === "object") {
     cols = cols.filter(function (col) {
-      return resizeableColumns.includes(col.id.split('--')[1]);
+      return resizeableColumns.includes(col.id.split("--")[1]);
     });
   }
 
@@ -55,8 +55,7 @@ module.exports = function (table, hasChildRow, isChildRowTogglerFirst, resizeabl
       }
     });
     document.addEventListener("mouseup", function (e) {
-      if (e.target.nodeName === 'INPUT') return;
-      e.stopPropagation();
+      if (e.target.nodeName === "INPUT") return;
       curCol = undefined;
       nxtCol = undefined;
       pageX = undefined;
